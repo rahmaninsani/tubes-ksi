@@ -1,6 +1,6 @@
 import "@/styles/globals.css"
 
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react"
 import type { AppProps } from "next/app"
 import Head from "next/head"
 
@@ -13,14 +13,14 @@ function MyApp({ Component, pageProps }: AppProps) {
     document.body.className = cn(
       "min-h-screen bg-background font-sans antialiased",
       fontSans.variable
-    );
-  });
+    )
+  })
 
   return (
     <>
       <Head>
         <title>{siteConfig.name}</title>
-        <link rel="icon" href="../public/favicon.ico" />
+        <link rel="icon" href="/static/favicon.ico" />
       </Head>
       <div className="relative flex min-h-screen flex-col">
         <div className="flex-1">

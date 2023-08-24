@@ -17,8 +17,7 @@ const HankoAuth = () => {
   }, [])
 
   const redirectAfterLogin = useCallback(() => {
-    router.push("/profil")
-    router.refresh()
+    router.replace("/profil")
   }, [router])
 
   useEffect(
