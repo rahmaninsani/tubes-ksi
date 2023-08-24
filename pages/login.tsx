@@ -1,10 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
+import dynamic from "next/dynamic"
 
 import { buttonVariants } from "@/components/ui/button"
-import HankoAuth from "@/components/HankoAuth"
 
-const LoginPage = () => {
+export default function LoginPage ()  {
+  const HankoAuth = dynamic(() => import("@/components/HankoAuth"), {
+    ssr: false,
+  })
+
   return (
     <>
       <section className="flex flex-row">
@@ -46,4 +50,3 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
